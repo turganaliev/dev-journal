@@ -13,7 +13,7 @@ This is a full-stack web application built with Python and Django. The app is de
 
 * **Back-End:** Python, Django
 * **Front-End:** HTML, CSS
-* **Database:** SQLite (default for development)
+* **Database:** SQLite
 * **Hosting:** PythonAnywhere
 
 ## Getting Started
@@ -22,7 +22,7 @@ To run this project locally, follow these steps:
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/turganaliev/web_app.git](https://github.com/turganaliev/web_app.git)
+    git clone https://github.com/turganaliev/web_app.git
     cd web_app
     ```
 2.  Set up a virtual environment and install dependencies:
@@ -31,15 +31,9 @@ To run this project locally, follow these steps:
     source venv/bin/activate
     pip install -r requirements.txt
     ```
-    *(Note: You will need to create a `requirements.txt` file by running `pip freeze > requirements.txt`.)*
 3.  Apply database migrations and run the server:
     ```bash
     python manage.py makemigrations learning_logs
     python manage.py migrate
     python manage.py runserver
     ```
-
-## Live Demo
-
-You can view a live version of the application here:
-[https://turganaliev.pythonanywhere.com/](https://turganaliev.pythonanywhere.com/)
