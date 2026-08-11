@@ -1,39 +1,56 @@
-# Learning Log App
+k# Dev Journal
 
-This is a full-stack web application built with Python and Django. The app is designed to help users keep a personal record of topics they are learning about, as well as journal entries related to those topics.
+A full-stack web app for tracking what you're learning as a developer — log topics like languages, frameworks, or algorithms, and journal your progress on each one as you go.
+
+Built this to have a running record of my own learning path (Python, Java, DSA) instead of scattered notes — small, but it's genuinely part of how I track my own study now.
+
+**Live demo:** [your-app-name.onrender.com](https://your-app-name.onrender.com) *(update once deployed)*
 
 ## Features
 
-* **User Authentication:** Users can register, log in, and log out.
-* **Topic Management:** Logged-in users can create, edit, and delete topics.
-* **Entry Tracking:** Users can add multiple entries to each topic.
-* **Private Data:** All topics and entries are private and accessible only to the user who created them.
+- **User authentication** — register, log in, log out
+- **Topic management** — create, edit, and delete topics you're learning about (languages, frameworks, algorithms, whatever you're studying)
+- **Entry tracking** — add multiple journal entries per topic to log progress over time
+- **Private by default** — topics and entries are only visible to the user who created them
 
-## Technologies Used
+## Tech stack
 
-* **Back-End:** Python, Django
-* **Front-End:** HTML, CSS
-* **Database:** SQLite
-* **Hosting:** PythonAnywhere
+- **Backend:** Python, Django 4.2
+- **Frontend:** HTML, CSS, Bootstrap 3
+- **Database:** PostgreSQL (SQLite for local development)
+- **Deployment:** Render, with WhiteNoise for static file serving
 
-## Getting Started
+## Running it locally
 
-To run this project locally, follow these steps:
+```bash
+git clone https://github.com/turganaliev/dev-journal.git
+cd dev-journal
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/turganaliev/web_app.git
-    cd web_app
-    ```
-2.  Set up a virtual environment and install dependencies:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    ```
-3.  Apply database migrations and run the server:
-    ```bash
-    python manage.py makemigrations learning_logs
-    python manage.py migrate
-    python manage.py runserver
-    ```
+python3 -m venv env
+source env/bin/activate      # Windows: env\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+Create a `.env` file in the project root:
+```
+SECRET_KEY=your-local-secret-key
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1,localhost
+```
+
+Generate a secret key with:
+```bash
+python3 -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
+
+Then run migrations and start the server:
+```bash
+python3 manage.py migrate
+python3 manage.py runserver
+```
+Visit `http://127.0.0.1:8000`.
+
+## Deployment
+
+Deployed on Render with a managed PostgreSQL instance. Environment variables (`SECRET_KEY`, `DEBUG`, `ALLOWED_HOSTS`, `DATABASE_URL`) are configured in the Render dashboard rather than committed to the repo.
