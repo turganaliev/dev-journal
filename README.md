@@ -1,4 +1,4 @@
-k# Dev Journal
+# Dev Journal
 
 A full-stack web app for tracking what you're learning as a developer — log topics like languages, frameworks, or algorithms, and journal your progress on each one as you go.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root:
 ```
-SECRET_KEY=your-local-secret-key
+SECRET_KEY=local-secret-key
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
 ```
