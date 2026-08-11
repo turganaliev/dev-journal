@@ -28,7 +28,12 @@
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
               <li><a>Hello, {{ user.username }}.</a></li>
-              <li><a href="{% url 'logout' %}">Log Out</a></li>
+	      <li>
+  		<a href="#" onclick="document.getElementById('logout-form').submit(); return false;">Log Out</a>
+  		  <form id="logout-form" action="{% url 'logout' %}" method="post" style="display: none;">
+    		  {% csrf_token %}
+  		</form>
+	     </li>
             {% else %}
               <li><a href="{% url 'signup' %}">Sign Up</a></li>
               <li><a href="{% url 'login' %}">Log In</a></li>
