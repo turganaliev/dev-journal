@@ -4,7 +4,7 @@ A full-stack web app for tracking what you're learning as a developer — log to
 
 Built this to have a running record of my own learning path (Python, Java, DSA) instead of scattered notes — small, but it's genuinely part of how I track my own study now.
 
-**Live demo:** [[https://dev-journal-m4o2.onrender.com](https://dev-journal-m4o2.onrender.com)
+**Live demo:** [https://dev-journal-m4o2.onrender.com](https://dev-journal-m4o2.onrender.com)
 
 ## Features
 
